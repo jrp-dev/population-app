@@ -8,6 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+/**
+ * Fetches population data from a JSON file.
+ *
+ * @returns {Promise<IPopulationData>} The population data.
+ */
 const getPopulation = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const response = yield fetch('./data.json');
@@ -16,8 +21,12 @@ const getPopulation = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     catch (error) {
         console.error(error);
+        throw error;
     }
 });
+/**
+ * Creates group cards based on population data.
+ */
 const createGroupCards = () => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield getPopulation();
     const population = data === null || data === void 0 ? void 0 : data.data;

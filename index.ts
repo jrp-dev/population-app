@@ -10,16 +10,26 @@ interface IPopulationGroup {
   }[];
 }
 
-const getPopulation = async () => {
-  try {
-    const response = await fetch('./data.json');
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
+/**
+ * Fetches population data from a JSON file.
+ *
+ * @returns {Promise<IPopulationGroup[]>} The population data.
+ */
+  const getPopulation = async (): Promise<{data: IPopulationGroup[]}> => {
+    try {
+      const response = await fetch('./data.json');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
   }
-}
 
+
+/**
+ * Creates group cards based on population data.
+ */
 const createGroupCards = async () => {
 
   const data = await getPopulation();
