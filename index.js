@@ -12,7 +12,6 @@ const getPopulation = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const response = yield fetch('./data.json');
         const data = yield response.json();
-        console.log('data :', data);
         return data;
     }
     catch (error) {

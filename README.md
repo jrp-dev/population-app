@@ -4,10 +4,13 @@ This project is a simple web application that displays population data for diffe
 
 ### Table of Contents
 
-* [Features](#features)
+* [Demo](#demo)
 * [Features](#features)
 * [Technologies Used](#technologies-used)
 * [Usage](#usage)
+
+## Demo
+https://jrppopulationapp.vercel.app/
 
 ### Features
 
@@ -26,7 +29,7 @@ This project is a simple web application that displays population data for diffe
 1. **Clone the repository.**
 
    ```bash
-   git clone https://your-github-repo-url.git
+   git clone https://github.com/jrp-dev/population-app.git
    ```
 
 2. **Install the `http-server` package (one-time setup).**
